@@ -30,7 +30,14 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+          test: /\.css$/,
+          use: [
+              'vue-style-loader',
+              'css-loader'
+          ]
+      },
+      {
+        test: /\.(png|jpg|gif|svg|woff|ttf)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
