@@ -1,1 +1,5 @@
 .idea
+static/.DS_Store
+static/node_modules/
+static/dist/
+static/npm-debug.log
