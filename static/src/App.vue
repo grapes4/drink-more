@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <el-container>
-            <el-header><MainHeader /></el-header>
+            <el-header height="82px"><MainHeader /></el-header>
             <el-main><MainArea /></el-main>
             <el-footer><MainFooter /></el-footer>
         </el-container>
@@ -42,7 +42,8 @@
     .el-header {
         background-color: #B3C0D1;
         color: #333;
-        line-height: 60px;
+        line-height: 82px;
+        padding: 0;
     }
 
     .el-aside {
