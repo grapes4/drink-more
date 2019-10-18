@@ -1,7 +1,7 @@
 <template>
-    <el-container>
+    <div id="main-area">
         Main
-    </el-container>
+    </div>
 </template>
 
 <script>
@@ -11,5 +11,8 @@
 </script>
 
 <style scoped>
-
+#main-area {
+    height: 500px;
+    background: #eee;
+}
 </style>

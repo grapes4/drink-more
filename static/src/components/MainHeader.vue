@@ -3,7 +3,7 @@
         <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></el-col>
         <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
             <div class="grid-content bg-purple-light">
-                <img src="../assets/logo.png" class="img-logo">
+                <img :src="logoUrl" class="img-logo">
             </div>
         </el-col>
         <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
@@ -17,7 +17,10 @@
 
 <script>
     export default {
-        name: "main-header"
+        name: "main-header",
+        data: {
+            logoUrl: require("../assets/logo.png")
+        }
     }
 </script>
 
