@@ -21,7 +21,9 @@
             MainFooter
         },
         data() {
+            return {
 
+            }
         }
     };
 </script>

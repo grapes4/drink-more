@@ -85,7 +85,7 @@ class CI_Controller {
 	/**
 	 * Get the CI singleton
 	 *
-	 * @static
+	 * @view
 	 * @return	object
 	 */
 	public static function &get_instance()

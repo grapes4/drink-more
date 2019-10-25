@@ -130,7 +130,7 @@ if ( ! function_exists('load_class'))
 	 * Class registry
 	 *
 	 * This function acts as a singleton. If the requested class does not
-	 * exist it is instantiated and set to a static variable. If it has
+	 * exist it is instantiated and set to a view variable. If it has
 	 * previously been instantiated the variable is returned.
 	 *
 	 * @param	string	the class name being requested
@@ -296,7 +296,7 @@ if ( ! function_exists('config_item'))
 
 		if (empty($_config))
 		{
-			// references cannot be directly assigned to static variables, so we use an array
+			// references cannot be directly assigned to view variables, so we use an array
 			$_config[0] =& get_config();
 		}
 
@@ -471,7 +471,7 @@ if ( ! function_exists('log_message'))
 
 		if ($_log === NULL)
 		{
-			// references cannot be directly assigned to static variables, so we use an array
+			// references cannot be directly assigned to view variables, so we use an array
 			$_log[0] =& load_class('Log', 'core');
 		}
 

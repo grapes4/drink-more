@@ -1,16 +1,13 @@
 <template>
     <el-row>
-        <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1"><div class="grid-content bg-purple"></div></el-col>
-        <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+        <el-col :xs="0" :lg="2"><div class="grid-content bg-purple"></div></el-col>
+        <el-col :xs="24" :lg="20">
             <div class="grid-content bg-purple-light">
                 <img :src="logoUrl" class="img-logo">
             </div>
         </el-col>
-        <el-col :xs="4" :sm="6" :md="8" :lg="9" :xl="11">
+        <el-col :xs="0" :lg="2">
             <div class="grid-content bg-purple"></div>
-        </el-col>
-        <el-col :xs="8" :sm="6" :md="4" :lg="3" :xl="1">
-            <div class="grid-content bg-purple-light"></div>
         </el-col>
     </el-row>
 </template>
@@ -18,8 +15,10 @@
 <script>
     export default {
         name: "main-header",
-        data: {
-            logoUrl: require("../assets/logo.png")
+        data() {
+            return {
+                logoUrl: require("../assets/logo.png")
+            }
         }
     }
 </script>
