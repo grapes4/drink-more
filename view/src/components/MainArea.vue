@@ -1,18 +1,27 @@
 <template>
     <div id="main-area">
-        Main
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
+    import IndexPage from '../pages/Index.vue';
     export default {
-        name: "main-area"
+        name: "main-area",
+        components:{
+            IndexPage
+        },
+        data() {
+            return {
+
+            }
+        }
     }
 </script>
 
 <style scoped>
 #main-area {
-    height: 500px;
-    background: #eee;
+    background-color: #003399;
+    overflow: auto;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <el-container>
-            <el-header height="82px"><MainHeader /></el-header>
+            <el-header height="171px"><MainHeader /></el-header>
             <el-main><MainArea /></el-main>
             <el-footer><MainFooter /></el-footer>
         </el-container>
@@ -34,10 +34,9 @@
         margin: 0;
         padding: 0;
     }
-    .el-header {
-        background-color: #B3C0D1;
-        color: #333;
-        line-height: 82px;
+    .el-header,
+    .el-footer {
+        display: block;
         padding: 0;
     }
 
@@ -47,5 +46,11 @@
 
     .el-aside {
         color: #333;
+    }
+
+    .el-menu--horizontal>.el-submenu .el-submenu__title {
+         height: 126px;
+         line-height: 126px;
+         font-size: 18px;
     }
 </style>

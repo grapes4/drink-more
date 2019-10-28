@@ -5,7 +5,7 @@ module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    publicPath: '/view/dist/',
+    publicPath: '/dist/',
     filename: 'build.js'
   },
   module: {
@@ -16,13 +16,18 @@ module.exports = {
           'vue-style-loader',
           'css-loader'
         ],
-      },      {
+      },
+        {
+            test: /\.less$/,
+            loader: "vue-style-loader!css-loader!less-loader"
+
+        },
+        {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
           loaders: {
-              'scss': 'vue-style-loader!css-loader!sass-loader',
-              'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+
           }
           // other vue-loader options go here
         }
@@ -77,4 +82,5 @@ if (process.env.NODE_ENV === 'production') {
       minimize: true
     })
   ])
+    module.exports.output.publicPath = '/view/dist'
 }
