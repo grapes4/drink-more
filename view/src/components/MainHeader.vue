@@ -17,7 +17,7 @@
                         active-text-color="#409EFF"
                 >
                     <el-menu-item index="/">首页</el-menu-item>
-                    <el-submenu popper-class="nav-submenu">
+                    <el-submenu popper-class="nav-submenu" index="">
                         <template slot="title">企业概况</template>
                         <el-menu-item index="/introduction">公司简介</el-menu-item>
                         <el-menu-item index="/culture">文化理念</el-menu-item>

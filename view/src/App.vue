@@ -53,4 +53,10 @@
          line-height: 126px;
          font-size: 18px;
     }
+
+    .el-carousel__button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+    }
 </style>
