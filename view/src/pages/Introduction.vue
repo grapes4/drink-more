@@ -1,10 +1,37 @@
 <template>
-    <h1>公司简介</h1>
+    <div id="introduction-page">
+        <el-image
+                style="height:450px;width:100%;"
+                :src="imgUrl.url"
+                :alt="imgUrl.name"
+                fit="fill"
+        >
+        </el-image>
+        <h1>公司简介</h1>
+    </div>
 </template>
 
 <script>
     export default {
-        name: "introduction-page"
+        name: "introduction-page",
+        data() {
+            return {
+                imgUrl: {}
+            }
+        },
+        created(){
+            // this.axios.get('index/getImage', {
+            //     params: {
+            //         page: 'introduction'
+            //     }
+            // })
+            //     .then(res => {
+            //         this.imgUrl = res.data;
+            //     })
+            //     .catch(
+            //         err => console.log(err)
+            //     );
+        }
     }
 </script>
 

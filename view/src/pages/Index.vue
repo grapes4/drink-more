@@ -24,10 +24,13 @@
             }
         },
         created(){
-            this.axios.get('index/getCarouselImageUrl')
+            this.axios.get('index/getImage', {
+                params: {
+                    page: 'home'
+                }
+            })
                 .then(res => {
                     this.imgUrl = this.imgUrl.concat(res.data);
-                    console.log(this.imgUrl);
                 })
                 .catch(
                     err => console.log(err)
