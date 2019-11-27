@@ -7,7 +7,7 @@
                 fit="fill"
         >
         </el-image>
-        <h1>公司简介</h1>
+        <h1>企业简介</h1>
     </div>
 </template>
 

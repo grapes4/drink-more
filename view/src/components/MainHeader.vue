@@ -16,16 +16,13 @@
                         :router="isRouterAble"
                         active-text-color="#409EFF"
                 >
-                    <el-menu-item index="/">首页</el-menu-item>
-                    <el-submenu popper-class="nav-submenu" index="">
-                        <template slot="title">企业概况</template>
-                        <el-menu-item index="/introduction">公司简介</el-menu-item>
-                        <el-menu-item index="/culture">文化理念</el-menu-item>
-                        <el-menu-item index="/connection">联系我们</el-menu-item>
-                    </el-submenu>
+                    <el-menu-item index="/">公司首页</el-menu-item>
+                    <el-menu-item index="/introduction">企业简介</el-menu-item>
+                    <el-menu-item index="/news">企业新闻</el-menu-item>
                     <el-menu-item index="/production">产品中心</el-menu-item>
-                    <el-menu-item index="/news">新闻资讯</el-menu-item>
-                    <el-menu-item index="/store">茅台商城</el-menu-item>
+                    <el-menu-item index="/investment">品牌招商</el-menu-item>
+                    <el-menu-item index="/comment">品牌评论</el-menu-item>
+                    <el-menu-item index="/connection">联系方式</el-menu-item>
                 </el-menu>
             </div>
         </el-row>
@@ -95,11 +92,12 @@
 
         .img-logo {
             display: block;
-            height: 62px;
             position: absolute;
-            top: 50%;
-            margin-top: -31px;
+            margin-top: 6px;
+            margin-left: 127px;
             float: left;
+            height: 109px;
+            width: 185px;
         }
 
         .nav-menu {

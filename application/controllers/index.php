@@ -30,7 +30,7 @@ class index extends CI_Controller {
         $this->load->view('index');
     }
 
-    public function getCarouselImageUrl()
+    public function getImage()
     {
         $data = $this->home_model->get_data();
         $this->output->set_content_type('application/json')->set_output(json_encode($data));

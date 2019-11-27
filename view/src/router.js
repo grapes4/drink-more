@@ -2,12 +2,12 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Connection from './pages/Connection'
-import Culture from './pages/Culture'
+import Investment from './pages/Investment'
 import Index from './pages/Index'
 import Introduction from './pages/Introduction'
 import News from './pages/News'
 import Production from './pages/Production'
-import Store from './pages/Store'
+import Comment from './pages/Comment'
 
 Vue.use(VueRouter)
 
@@ -20,11 +20,6 @@ export default new VueRouter({
             component: Index
         },
         {
-            path: '/connection',
-            name: 'Connection',
-            component: Connection
-        },
-        {
             path: '/introduction',
             name: 'Introduction',
             component: Introduction
@@ -35,19 +30,24 @@ export default new VueRouter({
             component: News
         },
         {
-            path: '/culture',
-            name: 'Culture',
-            component: Culture
-        },
-        {
             path: '/production',
             name: 'Production',
             component: Production
         },
         {
-            path: '/store',
-            name: 'Store',
-            component: Store
+            path: '/investment',
+            name: 'Investment',
+            component: Investment
         },
+        {
+            path: '/comment',
+            name: 'Comment',
+            component: Comment
+        },
+        {
+            path: '/connection',
+            name: 'Connection',
+            component: Connection
+        }
     ]
 })

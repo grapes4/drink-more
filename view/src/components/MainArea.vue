@@ -21,7 +21,7 @@
 
 <style scoped>
 #main-area {
-    background-color: #003399;
+    background-color: #fff;
     overflow: auto;
 }
 </style>

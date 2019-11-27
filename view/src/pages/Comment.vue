@@ -1,10 +1,10 @@
 <template>
-    <h1>文化理念</h1>
+    <h1>品牌评论</h1>
 </template>
 
 <script>
     export default {
-        name: "culture-page"
+        name: "comment-page"
     }
 </script>
 

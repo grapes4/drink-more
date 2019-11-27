@@ -16,11 +16,22 @@ class Home_model extends CI_Model
 
     public function get_data()
     {
-        $data = get_dir_file_info(APPPATH.'../static/image/home/carousel');
-        $result = array_map(function ($item) {
+        $page = $this->input->get('page');
+        switch ($page) {
+            case 'home-head':
+                $urlPara = 'home/head';
+                break;
+            case 'home-brand':
+                $urlPara = 'home/brand';
+                break;
+            default:
+                $urlPara = $page;
+        }
+        $data = get_dir_file_info(APPPATH . '../static/image/' . $urlPara, true);
+        $result = array_map(function ($item) use ($urlPara) {
             return array(
                 'name' => $item['name'],
-                'url' => '/static/image/home/carousel/'.$item['name']
+                'url' => '/static/image/' . $urlPara . '/' . $item['name']
             );
         }, array_values($data));
         return $result;
