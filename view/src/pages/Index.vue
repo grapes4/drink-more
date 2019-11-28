@@ -65,7 +65,7 @@
             })
                 .then(res => {
                     this.brandImgUrl = res.data[0];
-                    console.log(this.brandImgUrl.url)
+                    // console.log(this.brandImgUrl.url)
                 })
                 .catch(
                     err => console.log(err)
