@@ -58,7 +58,7 @@
                 this.today = `${year} 年 ${month} 月 ${strDate} 日 ${weekDay[date.getDay()]}`;
             },
             handleSelect(key, keyPath) {
-                console.log(key, keyPath);
+                // console.log(key, keyPath);
             }
         },
         mounted() {

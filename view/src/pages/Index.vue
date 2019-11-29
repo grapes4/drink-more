@@ -32,12 +32,19 @@
                 </div>
             </div>
         </div>
+        <div class="production-list-container">
+            <ProductionList />
+        </div>
     </div>
 </template>
 
 <script>
+    import ProductionList from '../components/ProductionList.vue';
     export default {
         name: "index-page",
+        components: {
+            ProductionList
+        },
         data() {
             return {
                 imgUrl: [],
@@ -102,6 +109,7 @@
                 border-radius:50%;
             }
         }
+
         .content-text {
             float: right;
             width: 850px;
@@ -117,6 +125,10 @@
                 word-break: break-word;
                 line-height: 1.6;
             }
+        }
+
+        .production-list-container {
+            width: 100%;
         }
     }
 </style>

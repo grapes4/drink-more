@@ -12,7 +12,7 @@ import Comment from './pages/Comment'
 Vue.use(VueRouter)
 
 export default new VueRouter({
-    mode: 'history',
+    mode: 'hash',
     routes: [
         {
             path: '/',
