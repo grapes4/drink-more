@@ -1,7 +1,7 @@
 <template>
     <div class="index-page">
         <el-carousel height="450px">
-            <el-carousel-item v-for="(item, index) in imgUrl" :key="index">
+            <el-carousel-item v-for="(item, index) in imgList.head" :key="index">
                 <el-image
                     style="height:450px;width:100%;"
                     :src="item.url"
@@ -11,10 +11,11 @@
                 </el-image>
             </el-carousel-item>
         </el-carousel>
-        <div class="content-main">
+        <div class="content-des-container">
+            <el-divider><span class="area-title">品牌简介</span></el-divider>
             <div class="content-brand">
                 <img
-                    :src="brandImgUrl.url"
+                    :src="imgList.brand.url"
                      alt="馥中春"
                 >
             </div>
@@ -33,7 +34,8 @@
             </div>
         </div>
         <div class="production-list-container">
-            <ProductionList />
+            <el-divider><span class="area-title">产品列表</span></el-divider>
+            <ProductionList :imgList="imgList.proList" />
         </div>
     </div>
 </template>
@@ -47,36 +49,31 @@
         },
         data() {
             return {
-                imgUrl: [],
-                brandImgUrl: {}
+                imgList: {
+                    brand: {url: '', name: ''},
+                    head: [],
+                    proList: []
+                },
             }
         },
-        created(){
-            this.axios.get('index/getImage', {
-                params: {
-                    page: 'home-head'
-                }
-            })
-                .then(res => {
-                    // console.log(res.data);
-                    this.imgUrl = this.imgUrl.concat(res.data);
+        mounted(){
+            this.getImageData();
+        },
+        methods: {
+            getImageData() {
+                this.axios.get('index/getImage', {
+                    params: {
+                        page: 'home'
+                    }
                 })
-                .catch(
-                    err => console.log(err)
-                );
-
-            this.axios.get('index/getImage', {
-                params: {
-                    page: 'home-brand'
-                }
-            })
-                .then(res => {
-                    this.brandImgUrl = res.data[0];
-                    // console.log(this.brandImgUrl.url)
-                })
-                .catch(
-                    err => console.log(err)
-                );
+                    .then(res => {
+                        // console.log(res.data);
+                        this.imgList = res.data;
+                    })
+                    .catch(
+                        err => console.log(err)
+                    );
+            }
         }
     }
 </script>
@@ -87,16 +84,23 @@
         height: 50px;
         text-align: center;
     }
-    .content-main {
+
+    .area-title {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .content-des-container {
         width: 1200px;
         margin: 0 auto;
         clear: both;
         overflow: auto;
+        padding-top: 20px;
 
         .content-brand {
             float: left;
             width: 300px;
-            height: 280px;
+            height: 250px;
             position: relative;
 
             img {
@@ -116,7 +120,6 @@
 
             .text-main {
                 margin: 30px;
-
             }
 
             p {
@@ -126,9 +129,9 @@
                 line-height: 1.6;
             }
         }
-
-        .production-list-container {
-            width: 100%;
-        }
+    }
+    .production-list-container {
+        width: 1200px;
+        margin: 0 auto;
     }
 </style>

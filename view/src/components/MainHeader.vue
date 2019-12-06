@@ -21,7 +21,7 @@
                     <el-menu-item index="/news">企业新闻</el-menu-item>
                     <el-menu-item index="/production">产品中心</el-menu-item>
                     <el-menu-item index="/investment">品牌招商</el-menu-item>
-                    <el-menu-item index="/comment">品牌评论</el-menu-item>
+                    <!--<el-menu-item index="/comment">品牌评论</el-menu-item>-->
                     <el-menu-item index="/connection">联系方式</el-menu-item>
                 </el-menu>
             </div>
@@ -94,7 +94,7 @@
             display: block;
             position: absolute;
             margin-top: 6px;
-            margin-left: 127px;
+            /*margin-left: 127px;*/
             float: left;
             height: 109px;
             width: 185px;

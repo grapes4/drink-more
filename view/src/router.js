@@ -39,11 +39,11 @@ export default new VueRouter({
             name: 'Investment',
             component: Investment
         },
-        {
-            path: '/comment',
-            name: 'Comment',
-            component: Comment
-        },
+        // {
+        //     path: '/comment',
+        //     name: 'Comment',
+        //     component: Comment
+        // },
         {
             path: '/connection',
             name: 'Connection',

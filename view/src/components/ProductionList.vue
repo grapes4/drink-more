@@ -1,16 +1,14 @@
 <template>
     <el-row class="production-list">
-        <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
-            <el-card :body-style="{ padding: '0px' }">
-                <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
-                <div style="padding: 14px;">
-                    <span>好吃的汉堡</span>
-                    <div class="bottom clearfix">
-                        <time class="time">{{ currentDate }}</time>
-                        <el-button type="text" class="button">操作按钮</el-button>
+        <el-col :span="4" v-for="(item, index) in imgList" :key="index" :offset="3">
+            <router-link to="/production/index">
+                <el-card :body-style="{ padding: '0px', position: 'relative' }">
+                    <img :src="item.url" :alt="`馥中春酒 - ${imgName[index]}`">
+                    <div class="pro-des">
+                        <span>馥中春酒 - {{imgName[index]}}</span>
                     </div>
-                </div>
-            </el-card>
+                </el-card>
+            </router-link>
         </el-col>
     </el-row>
 </template>
@@ -18,42 +16,53 @@
 <script>
     export default {
         name: "ProductionList",
+        props:['imgList'],
         data() {
             return {
-                currentDate: new Date()
+                proList: {},
+                imgName: [
+                    '至尊',
+                    '贵族',
+                    '臻藏',
+                    '典藏',
+                    '封藏',
+                    '精装小酒'
+                ]
             };
         }
     }
 </script>
 
-<style scoped>
-    .time {
-        font-size: 13px;
-        color: #999;
+<style lang="less" scoped>
+    .production-list {
+        padding-top: 30px;
     }
 
-    .bottom {
-        margin-top: 13px;
-        line-height: 12px;
+    .el-card {
+        margin-bottom: 50px;
+
+        .pro-des {
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+            background-color: rgba(0, 0, 0, 0.4);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            color: #fff;
+        }
+
+        /*&:hover {*/
+            /*.pro-des {*/
+                /*height: 50px;*/
+            /*}*/
+        /*}*/
     }
 
-    .button {
-        padding: 0;
-        float: right;
-    }
-
-    .image {
-        width: 100%;
+    img {
+        width: 198px;
+        height: 198px;
         display: block;
-    }
-
-    .clearfix:before,
-    .clearfix:after {
-        display: table;
-        content: "";
-    }
-
-    .clearfix:after {
-        clear: both
     }
 </style>

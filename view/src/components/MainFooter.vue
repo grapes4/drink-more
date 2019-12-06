@@ -2,8 +2,9 @@
     <el-container class="main-footer">
         <div class="foot-content">
             <div class="foot-content-main">
-                <p>贵州汇四方商务服务有限责任公司</p>
-                <p class="bq">黔ICP备19011893号</p>
+                <span>Copyright © 2019-2020</span>
+                <span>贵州汇四方商务服务有限责任公司</span>
+                <span class="bq">黔ICP备19011893号</span>
             </div>
         </div>
     </el-container>
@@ -26,20 +27,20 @@
         margin: 0 auto;
         text-align: center;
         color: #ccc;
+        height: 80px;
 
         &-main {
-            ul {
-                clear: both;
-                margin: 0 auto;
-                width: 900px;
+            clear: both;
+            margin: 0 auto;
+            width: 900px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
 
-                li {
-                    float: left;
-                    display: block;
-                    margin-right: 30px;
-                }
+            span {
+                margin-right: 20px;
+                font-size: 14px;
             }
-
         }
     }
 </style>

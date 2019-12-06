@@ -17,23 +17,33 @@ class Home_model extends CI_Model
     public function get_data()
     {
         $page = $this->input->get('page');
-        switch ($page) {
-            case 'home-head':
-                $urlPara = 'home/head';
-                break;
-            case 'home-brand':
-                $urlPara = 'home/brand';
-                break;
-            default:
-                $urlPara = $page;
+        $result = null;
+        if ($page == 'home') {
+            $data_head = get_dir_file_info(APPPATH . '../static/image/home/head', true);
+            $result['head'] = $this->handleImgData('home/head', $data_head);
+
+            $data_brand = get_dir_file_info(APPPATH . '../static/image/home/brand', true);
+            $result['brand'] = $this->handleImgData('home/brand', $data_brand)[0];
+
+            $data_pro_list = get_dir_file_info(APPPATH . '../static/image/production/pro_list', true);
+            $result['proList'] = $this->handleImgData('production/pro_list', $data_pro_list);
+
+        } else {
+            $data = get_dir_file_info(APPPATH . '../static/image/'.$page, true);
+            $result = $this->handleImgData($page, $data)[0];
         }
-        $data = get_dir_file_info(APPPATH . '../static/image/' . $urlPara, true);
-        $result = array_map(function ($item) use ($urlPara) {
+
+        return $result;
+    }
+
+    private function handleImgData($param, $list) {
+        $result = array_map(function ($item) use ($param) {
             return array(
                 'name' => $item['name'],
-                'url' => '/static/image/' . $urlPara . '/' . $item['name']
+                'url' => '/static/image/' . $param . '/' . $item['name']
             );
-        }, array_values($data));
+        }, array_values($list));
+
         return $result;
     }
 }
