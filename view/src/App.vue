@@ -64,4 +64,14 @@
         height: 10px;
         border-radius: 50%;
     }
+
+    .el-collapse-item__header {
+        font-size: 18px;
+        /*font-weight: 700;*/
+    }
+
+    .el-card__header {
+        font-weight: 700;
+        text-align: center;
+    }
 </style>
