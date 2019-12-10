@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
+import Index from './pages/Index'
 import Connection from './pages/Connection'
 import Investment from './pages/Investment'
-import Index from './pages/Index'
 import Introduction from './pages/Introduction'
 import News from './pages/News'
 import Production from './pages/Production'
@@ -11,7 +11,7 @@ import Comment from './pages/Comment'
 
 Vue.use(VueRouter)
 
-export default new VueRouter({
+const router = new VueRouter({
     mode: 'hash',
     routes: [
         {
@@ -49,5 +49,7 @@ export default new VueRouter({
             name: 'Connection',
             component: Connection
         }
-    ]
-})
+    ],
+});
+
+export default router;

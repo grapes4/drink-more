@@ -253,140 +253,138 @@
                 </el-collapse-item>
 
                 <el-collapse-item class="investment-part" title="为什么要选贵州汇四方公司？" name="4">
-                    <el-row>
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>销售随军指导支持</span>
-                                </div>
-                                <div>
-                                    <span>测量团队深度和广度</span>
-                                    <div>分析团队短板</div>
-                                </div>
+                    <div class="part-section">
+                        <el-divider><h3>销售随军指导支持</h3></el-divider>
+                        <el-row>
+                            <el-col :span="6" :offset="3">
+                                <el-card>
+                                    <ul>
+                                        <li>测量团队深度和广度</li>
+                                        <li>分析团队短板</li>
+                                    </ul>
+                                </el-card>
+                            </el-col>
+                            <el-col :span="6" style="font-size:32px;color:#f00;text-align:center;line-height:130px;">
                                 <span>+</span>
-                                <div>
-                                    <span>不同阶段的数据分析</span>
-                                    <div>全程跟踪指导</div>
-                                </div>
-                                <el-divider>不再孤军作战</el-divider>
-                            </el-card>
-                        </el-col>
+                            </el-col>
+                            <el-col :span="6">
+                                <el-card>
+                                    <ul>
+                                        <li>不同阶段的数据分析</li>
+                                        <li>全程跟踪指导</li>
+                                    </ul>
+                                </el-card>
+                            </el-col>
+                        </el-row>
+                        <h4 style="font-size:22px;"><em>不再孤军作战!</em></h4>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>有节过节 没节造节</span>
-                                </div>
-                                <h4><em>全年不间断营销造势 让客户始终期待</em></h4>
-                                <div class="img-28">
-                                    <p>促销造势强 客户都知道</p>
-                                </div>
-                            </el-card>
-                        </el-col>
-                    </el-row>
+                    <div class="part-section">
+                        <el-divider><h3>有节过节 没节造节</h3></el-divider>
+                        <h4><em>全年不间断营销造势 让客户始终期待</em></h4>
+                        <div class="img-28">
+                            <p>促销造势强 客户都知道</p>
+                        </div>
+                    </div>
                 </el-collapse-item>
 
                 <el-collapse-item class="investment-part" title="如何合作？" name="5">
-                    <el-row>
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>培训支持</span>
-                                </div>
-                                <p>企业文化产品优势培训</p>
-                                <p>酒水营销知识培训</p>
-                                <p>团队运作过程指导</p>
-                                <p>优秀运作经验分享</p>
-                                <div class="img-29"></div>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>培训支持</h3></el-divider>
+                        <div class="img-29"></div>
+                        <el-card>
+                            <ul>
+                                <li>企业文化产品优势培训</li>
+                                <li>酒水营销知识培训</li>
+                                <li>团队运作过程指导</li>
+                                <li>优秀运作经验分享</li>
+                            </ul>
+                        </el-card>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>品鉴酒支持</span>
-                                </div>
-                                <p>专业营销团队协助推广品牌</p>
-                                <p>举办品鉴酒会并给予品鉴酒支持</p>
-                                <p>按每批进货额给予品鉴酒样酒支持</p>
-                                <div class="img-30"></div>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>品鉴酒支持</h3></el-divider>
+                        <div class="img-30"></div>
+                        <el-card>
+                            <ul>
+                                <li>专业营销团队协助推广品牌</li>
+                                <li>举办品鉴酒会并给予品鉴酒支持</li>
+                                <li>按每批进货额给予品鉴酒样酒支持</li>
+                            </ul>
+                        </el-card>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>物料支持</span>
-                                </div>
-                                <p>统一的门头形象设计</p>
-                                <p>统一的宣传资料、促销品（POP宣传单、促销小礼品、产品形象画册等支持）</p>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>物料支持</h3></el-divider>
+                        <el-card>
+                            <ul>
+                                <li>统一的门头形象设计</li>
+                                <li>统一的宣传资料、促销品（POP宣传单、促销小礼品、产品形象画册等支持）</li>
+                            </ul>
+                        </el-card>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>媒体广告支持</span>
-                                </div>
-                                <p>公司负责线上、主流媒体等媒体广告投放</p>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>媒体广告支持</h3></el-divider>
+                        <p style="text-align: center;">公司负责线上、主流媒体等媒体广告投放。</p>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>市场营销支持</span>
-                                </div>
-                                <p>公司负责所有市场的规划，营销方案的制定</p>
-                                <p>不定期对各区域市场进行巡查</p>
-                                <p>做强有力的活动推广支持和宣传</p>
-                                <div class="img-31"></div>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>市场营销支持</h3></el-divider>
+                        <div class="img-31"></div>
+                        <el-card>
+                            <ul>
+                                <li>公司负责所有市场的规划，营销方案的制定</li>
+                                <li>不定期对各区域市场进行巡查</li>
+                                <li>做强有力的活动推广支持和宣传</li>
+                            </ul>
+                        </el-card>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>物流、调换货支持</span>
-                                </div>
-                                <p>每次进货达5万以上公司承担运费</p>
-                                <p>5万以下公司与加盟商双方各承担一半</p>
-                                <p>给予100%调换货支持（不影响二次销售，物流费由代理商承担</p>
-                                <div class="img-32"></div>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>物流、调换货支持</h3></el-divider>
+                        <div class="img-32"></div>
+                        <el-card>
+                            <ul>
+                                <li>每次进货达5万以上公司承担运费</li>
+                                <li>5万以下公司与加盟商双方各承担一半</li>
+                                <li>给予100%调换货支持（不影响二次销售，物流费由代理商承担）</li>
+                            </ul>
+                        </el-card>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>移动销售支持</span>
-                                </div>
-                                <p>公司的微信商城、淘宝、京东店铺，协助加盟商打通线上运营渠道</p>
-                                <div class="img-33"></div>
-                            </el-card>
-                        </el-col>
+                    <div class="part-section">
+                        <el-divider><h3>移动销售支持</h3></el-divider>
+                        <div class="img-33"></div>
+                        <p style="text-align:center;">公司的微信商城、淘宝、京东店铺，协助加盟商打通线上运营渠道。</p>
+                    </div>
 
-                        <el-col :span="12">
-                            <el-card class="part-section">
-                                <div slot="header" class="clearfix">
-                                    <span>年终返利支持</span>
-                                </div>
-                                <p>完成全年任务指标的80%、90%、100%以上，分别返利全年进货额的4%、6%、8%</p>
-                                <div class="img-34"></div>
-                            </el-card>
-                        </el-col>
-                    </el-row>
+                    <div class="part-section">
+                        <el-divider><h3>年终返利支持</h3></el-divider>
+                        <div class="img-34"></div>
+                        <el-card>
+                            <ul>
+                                <li>完成全年任务指标的80%，返利全年进货额的4%</li>
+                                <li>完成全年任务指标的90%，返利全年进货额的6%</li>
+                                <li>完成全年任务指标的100%，返利全年进货额的8%</li>
+                            </ul>
+                        </el-card>
+                    </div>
                 </el-collapse-item>
 
                 <el-collapse-item class="investment-part" title="合作条件" name="6">
-                    <p>1、有良好的商业信誉和一定的经济实力；</p>
-                    <p>2、对品牌有浓厚的兴趣且对当地市场非常熟悉；</p>
-                    <p>3、有完善的终端网络或较强的终端开发能力；</p>
-                    <p>4、有专项资金和人员投入；</p>
-                    <p>5、有合理的库存管理制度和完善的配送体系；</p>
-                    <p>6、对市场有敏锐的观察和透视能力；</p>
-                    <p>7、有先进的服务理念和完备的服务支持系统；</p>
-                    <p>8、有旺盛的事业心</p>
+                    <el-card>
+                        <ul>
+                            <li>1、有良好的商业信誉和一定的经济实力；</li>
+                            <li>2、对品牌有浓厚的兴趣且对当地市场非常熟悉；</li>
+                            <li>3、有完善的终端网络或较强的终端开发能力；</li>
+                            <li>4、有专项资金和人员投入；</li>
+                            <li>5、有合理的库存管理制度和完善的配送体系；</li>
+                            <li>6、对市场有敏锐的观察和透视能力；</li>
+                            <li>7、有先进的服务理念和完备的服务支持系统；</li>
+                            <li>8、有旺盛的事业心。</li>
+                        </ul>
+                    </el-card>
                 </el-collapse-item>
 
                 <el-collapse-item class="investment-part" title="合作流程" name="7">
@@ -394,8 +392,12 @@
                 </el-collapse-item>
 
                 <el-collapse-item class="investment-part" title="秉持初心 创富天下" name="8">
-                    <p>国内已有多家代理商抢先代理 酒品值得信赖</p>
-                    <div class="img-36"></div>
+                    <div class="img-36">
+                        <div class="part-8-text">
+                            <h4 style="margin:15px;">国内已有多家代理商抢先代理</h4>
+                            <h4 style="margin:0;"><em>酒品值得信赖</em></h4>
+                        </div>
+                    </div>
                 </el-collapse-item>
             </el-collapse>
         </div>
@@ -635,59 +637,68 @@ em {
     }
 
     .img-28 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
     }
 
     .img-29 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
     }
 
     .img-30 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
     }
 
     .img-31 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
     }
 
     .img-32 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
     }
 
     .img-33 {
-        width: 400px;
-        height: 200px;
+        width: 560px;
+        height: 400px;
     }
 
     .img-34 {
-        width: 400px;
-        height: 200px;
+        width: 500px;
+        height: 400px;
     }
 
     .img-35 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
     }
 
     .img-36 {
-        width: 400px;
-        height: 200px;
+        width: 800px;
+        height: 400px;
+        position: relative;
+
+        .part-8-text {
+            text-align: center;
+            width: 400px;
+            height: 100px;
+            position: absolute;
+            top: 163px;
+            left: 200px;
+        }
     }
 }
 
 .part-section {
-    /*width: 500px;*/
-        margin-top: 15px;
-        overflow: hidden;
+    margin-top: 15px;
+    overflow: hidden;
 
-        .el-divider {
-            margin: 30px auto;
-            width: 800px;
-        }
+    .el-divider {
+        margin: 30px auto;
+        width: 800px;
     }
+}
 </style>

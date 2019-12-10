@@ -1,24 +1,13 @@
 <template>
     <div class="index-page">
         <el-carousel height="450px">
-            <el-carousel-item v-for="(item, index) in imgList.head" :key="index">
-                <el-image
-                    style="height:450px;width:100%;"
-                    :src="item.url"
-                    :alt="item.name"
-                    fit="fill"
-                >
-                </el-image>
+            <el-carousel-item v-for="(item, index) in imgData" :key="index">
+                <div class="head-img" :style="`background-image:url(${item})`"></div>
             </el-carousel-item>
         </el-carousel>
         <div class="content-des-container">
             <el-divider><span class="area-title">品牌简介</span></el-divider>
-            <div class="content-brand">
-                <img
-                    :src="imgList.brand.url"
-                     alt="馥中春"
-                >
-            </div>
+            <div class="content-brand"><div class="brand"></div></div>
             <div class="content-text">
                 <div class="text-main">
                     <p>
@@ -35,7 +24,7 @@
         </div>
         <div class="production-list-container">
             <el-divider><span class="area-title">产品列表</span></el-divider>
-            <ProductionList :imgList="imgList.proList" />
+            <ProductionList />
         </div>
     </div>
 </template>
@@ -49,15 +38,16 @@
         },
         data() {
             return {
-                imgList: {
-                    brand: {url: '', name: ''},
-                    head: [],
-                    proList: []
-                },
+                imgData: [
+                    '/static/image/home/head/1.jpg',
+                    '/static/image/home/head/2.jpg',
+                    '/static/image/home/head/3.jpg',
+                    '/static/image/home/head/4.jpg'
+                ]
             }
         },
         mounted(){
-            this.getImageData();
+            // this.getImageData();
         },
         methods: {
             getImageData() {
@@ -90,6 +80,12 @@
         font-weight: 700;
     }
 
+    .head-img {
+        height: 100%;
+        width: 100%;
+        background-size: 100% 100%;
+    }
+
     .content-des-container {
         width: 1200px;
         margin: 0 auto;
@@ -99,11 +95,13 @@
 
         .content-brand {
             float: left;
-            width: 300px;
             height: 250px;
+            width: 300px;
             position: relative;
 
-            img {
+            .brand {
+                background-image: url("/static/image/home/brand/brand.png");
+                background-size: 100% 100%;
                 box-shadow: 1px 1px 5px #888;
                 height:160px;
                 width:160px;
@@ -111,6 +109,18 @@
                 top:45px;
                 right:0;
                 border-radius:50%;
+                transition: all 1.5s;
+                -moz-transition: all 1.5s; /* Firefox 4 */
+                -webkit-transition: all 1.5s; /* Safari 和 Chrome */
+                -o-transition: all 1.5s; /* Opera */
+
+                &:hover {
+                    transform:rotate(360deg);
+                    -ms-transform:rotate(360deg); 	/* IE 9 */
+                    -moz-transform:rotate(360deg); 	/* Firefox */
+                    -webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+                    -o-transform:rotate(360deg); 	/* Opera */
+                }
             }
         }
 

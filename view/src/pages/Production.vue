@@ -2,7 +2,7 @@
     <div class="production-page">
         <div class="title">产品中心</div>
         <div class="production-list-container">
-            <ProductionDetail v-for="(item, index) in proList" :pro-data="item" />
+            <ProductionDetail v-for="(item, index) in proImgList" :pro-data="{item, index}" />
         </div>
     </div>
 </template>
@@ -16,31 +16,13 @@
         },
         data() {
             return {
-                proList: [
-                    {
-                        img: '/static/image/production/pro_list/1_zhizun.jpg',
-                        keyWord: []
-                    },
-                    {
-                        img: '/static/image/production/pro_list/2_guizu.jpg',
-                        keyWord: []
-                    },
-                    {
-                        img: '/static/image/production/pro_list/3_zhencang.jpg',
-                        keyWord: []
-                    },
-                    {
-                        img: '/static/image/production/pro_list/4_diancang.jpg',
-                        keyWord: []
-                    },
-                    {
-                        img: '/static/image/production/pro_list/5_fengcang.jpg',
-                        keyWord: []
-                    },
-                    {
-                        img: '/static/image/production/pro_list/6_jingzhuangxiaojiu.jpg',
-                        keyWord: []
-                    },
+                proImgList: [
+                    '/static/image/production/pro_list/1_zhizun.jpg',
+                    '/static/image/production/pro_list/2_guizu.jpg',
+                    '/static/image/production/pro_list/3_zhencang.jpg',
+                    '/static/image/production/pro_list/4_diancang.jpg',
+                    '/static/image/production/pro_list/5_fengcang.jpg',
+                    '/static/image/production/pro_list/6_jingzhuangxiaojiu.jpg'
                 ]
             };
         },

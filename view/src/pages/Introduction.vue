@@ -42,7 +42,6 @@
                 })
                     .then(res => {
                         this.imgUrl = res.data;
-                        console.log(res.data);
                     })
                     .catch(
                         err => console.log(err)

@@ -5,9 +5,9 @@
             <div class="content-text">
                 <iframe
                     class="news-content"
-                    frameborder="0"
                     scrolling="yes"
                     :src="newsUrl"
+                    frameborder="0"
                 >
                 </iframe>
             </div>
@@ -68,12 +68,15 @@
     .content-text {
         width: 1200px;
         margin: 0 auto;
-        height: 500px;
+        height: 800px;
+        padding: 30px;
+        overflow: hidden;
     }
     .news-content {
-        margin: 20px 0;
+        margin: 0;
         width: 100%;
         height: 100%;
         overflow: visible;
+        border: solid 2px #333;
     }
 </style>

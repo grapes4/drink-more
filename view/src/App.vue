@@ -19,11 +19,6 @@
             MainHeader,
             MainArea,
             MainFooter
-        },
-        data() {
-            return {
-
-            }
         }
     };
 </script>
@@ -37,7 +32,7 @@
         font-size: 15px;
         color: #1a1a1a;
         -webkit-tap-highlight-color: rgba(26,26,26,0);
-
+        min-width: 1200px;
     }
     .el-header,
     .el-footer {

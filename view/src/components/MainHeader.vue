@@ -63,6 +63,12 @@
         },
         mounted() {
             this.getDateString();
+            this.activeIndex = this.$router.currentRoute.path || '/';
+        },
+        watch: {
+            '$route' (to, from) {
+                this.activeIndex = to.path;
+            }
         }
     }
 </script>
