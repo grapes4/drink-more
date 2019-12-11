@@ -2,12 +2,18 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Index from './pages/Index'
-import Connection from './pages/Connection'
-import Investment from './pages/Investment'
-import Introduction from './pages/Introduction'
-import News from './pages/News'
-import Production from './pages/Production'
-import Comment from './pages/Comment'
+
+const Connection = () => import('./pages/Connection.vue');
+const Investment = () => import('./pages/Investment.vue');
+const Introduction = () => import('./pages/Introduction.vue');
+const News = () => import('./pages/News.vue');
+const Production = () => import('./pages/Production.vue');
+// import Connection from './pages/Connection'
+// import Investment from './pages/Investment'
+// import Introduction from './pages/Introduction'
+// import News from './pages/News'
+// import Production from './pages/Production'
+// import Comment from './pages/Comment'
 
 Vue.use(VueRouter)
 
